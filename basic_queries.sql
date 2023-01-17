@@ -13,7 +13,7 @@ FROM person.Person;
 
 SELECT FirstName, LastName
 FROM Person.Person;
-----------------------------------------------------------------------------------------------
+
 
 -- DISTINCT
 
@@ -24,7 +24,7 @@ FROM Person.Person
 
 SELECT DISTINCT LastName
 FROM Person.Person
-----------------------------------------------------------------------------------------------
+
 
 -- WHERE
 
@@ -80,7 +80,7 @@ WHERE FirstName = 'Peter' AND LastName = 'Krebs'
 SELECT * 
 FROM Person.EmailAddress
 WHERE BusinessEntityID = 26
-----------------------------------------------------------------------------------------------
+
 
 -- COUNT
 
@@ -107,13 +107,13 @@ FROM Production.Product
 
 SELECT COUNT(DISTINCT Size)
 FROM Production.Product
-----------------------------------------------------------------------------------------------
+
 
 -- TOP
 
 SELECT TOP 10 *
 FROM Production.Product
-----------------------------------------------------------------------------------------------
+
 
 -- ORDER BY
 
@@ -141,7 +141,7 @@ ORDER BY ListPrice desc;
 SELECT TOP 4 Name, ProductNumber
 FROM Production.Product
 ORDER BY ProductID asc;
-----------------------------------------------------------------------------------------------
+
 
 -- BETWEEN
 -- o between é usado para encontrar valor entre um valor mínimo e valor máximo
@@ -158,7 +158,6 @@ SELECT *
 FROM HumanResources.Employee
 WHERE HireDate BETWEEN '2009/01/01' AND '2010/01/01'
 ORDER BY HireDate;
-----------------------------------------------------------------------------------------------
 
 -- IN
 -- nós usamos o operador IN junto com o WHERE
@@ -171,7 +170,6 @@ WHERE BusinessEntityID IN (2,7,13)
 SELECT * 
 FROM Person.Person
 WHERE BusinessEntityID NOT IN (2,7,13)
-----------------------------------------------------------------------------------------------
 
 -- LIKE
 
@@ -230,7 +228,7 @@ AND ListPrice BETWEEN 500 AND 1000
 SELECT COUNT(*)
 FROM Production.Product
 WHERE Name LIKE '%road%';
-----------------------------------------------------------------------------------------------
+
 
 -- MIN MAX SUM AVG
 -- funções de agregação basicamente agregam ou combinam dados de uma tabela em 1 resultado só 
@@ -246,7 +244,6 @@ FROM Sales.SalesOrderDetail
 
 SELECT TOP 10 AVG(LineTotal) AS 'Média valor das Vendas'
 FROM Sales.SalesOrderDetail
-----------------------------------------------------------------------------------------------
 
 -- GROUP BY
 -- basicamente divide o resultado da sua pesquisa em grupos
@@ -269,7 +266,6 @@ GROUP BY ProductID
 SELECT FirstName, COUNT(FirstName) AS 'Nomes'
 FROM Person.Person
 GROUP BY FirstName 
-
 
 -- na tabela production.product eu quero saber a média de preço para os produtos que são pratas (silver)
 
@@ -313,4 +309,3 @@ ORDER BY SUM(LineTotal) DESC;
 SELECT ProductID, COUNT(ProductID) AS 'Contagem', AVG(OrderQty) AS 'Média'
 FROM Production.WorkOrder
 GROUP BY ProductID
-----------------------------------------------------------------------------------------------
