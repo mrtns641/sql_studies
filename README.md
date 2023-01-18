@@ -1,2 +1,2 @@
-# sql_studies
- Repository for SQL studies (using SQL Server 2019)
+# :memo:SQL Concepts
+>This repository is for SQL studies (SQL Server 2019)
